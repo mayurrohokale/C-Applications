@@ -1,18 +1,33 @@
-
 #include<stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
-    float drr[4] = {98.3,4.3,51.6,7.6};
-    int i = 0;
+    int size = 0;
+    int iCnt = 0;
+    int *p = NULL;
 
-    printf("%f\n",drr[i]);
-    i++;
+    printf("Enter number of elemnts\n");
+    scanf("%d",&size);
 
-    printf(" %f\n",drr[i]);
-    i++;
+    p = (int*)malloc(sizeof(int) * size);
 
-    printf("%f\n",drr[i]);
+    printf("Please Enter Elements \n");
+    
+    for(iCnt = 0; iCnt < size; iCnt++)
+    {
+        scanf("%d",&p[iCnt]);
+    }
+
+    for(iCnt = 0; iCnt < size; iCnt++)
+    {
+        printf("%d\n",p[iCnt]);
+    }
+  
+    free(p);
+
+    return 0;
 
 
     return 0;
